@@ -1,0 +1,22 @@
+{
+    "name": "Gophish DevContainer",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "gophish",
+    "workspaceFolder": "/workspaces/gophish",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-azuretools.vscode-docker"
+        ],
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        }
+      }
+    },
+    "forwardPorts": [3333, 8080],
+    "postCreateCommand": "docker-compose up -d && ./open-browser.sh",
+    "remoteEnv": {
+      "DATABASE_URL": "postgres://user:password@db:5432/gophish?sslmode=disable"
+    }
+  }
+  
