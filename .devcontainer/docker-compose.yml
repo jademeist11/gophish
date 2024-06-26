@@ -5,6 +5,8 @@ services:
     ports:
       - "3333:3333"
       - "8080:8080"
+      - "8443:8443"
+      - "80:80"
     environment:
       - DATABASE_URL=postgres://user:password@db:5432/gophish?sslmode=disable
     depends_on:

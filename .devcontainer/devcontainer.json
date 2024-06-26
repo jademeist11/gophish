@@ -13,7 +13,7 @@
         }
       }
     },
-    "forwardPorts": [3333, 8080],
+    "forwardPorts": [3333, 8080, 8443, 80],
     "postCreateCommand": "docker-compose up -d && ./open-browser.sh",
     "remoteEnv": {
       "DATABASE_URL": "postgres://user:password@db:5432/gophish?sslmode=disable"
